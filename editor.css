@@ -1,0 +1,97 @@
+*{
+    margin: 0;padding: 0;
+    font-family: sans-serif;
+    color: #fff;
+    text-transform: capitalize;
+}
+body{
+    background: #555;
+}
+.container{
+    padding: 25px;
+    width: 80%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 3fr 2fr ;
+    background: #333;
+}
+.imgbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+#imgs{
+    padding-right: 15px;
+    display: none;
+}
+img,canvas{
+    max-width: 45vw;
+    max-height: 70vh;
+}
+#upload{
+    display: none;
+}
+#uploadlabel{
+    border: #ddd dotted 3px ;
+    margin-top: 20px;
+    padding: 7px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #555;
+    color: #000;
+}
+#uploadlabel:hover{
+    background: #777;
+    border: #fff dotted 3px;
+}
+ul{
+    list-style: none;
+    padding-left:15px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    direction: rtl;
+}
+ul li{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center ;
+    margin-top: 30px;
+    visibility: hidden;
+}
+.buttons span, .buttons a{
+    background: #060;
+    padding: 7px 10px;
+    border-radius: 10px;
+    border: transparent dotted 2px;
+    cursor: pointer;
+}
+.buttons span{
+    background: #800;
+}
+.buttons span:hover, .buttons a:hover{
+    background: #282;
+    cursor: pointer;
+    border: #fff dotted 2px;
+}
+.buttons span:hover{
+    background: #a22;
+}
+
+@media screen and (max-width:600px) {
+    .container{
+        gap: 50px;
+        grid-template-columns: 1fr;
+    }
+    img,canvas{
+        max-width: 65vw;
+        max-height: 70vh;
+    }
+}
